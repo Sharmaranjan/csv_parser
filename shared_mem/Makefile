@@ -14,7 +14,8 @@ MAKE_FLAGS = --no-print-directory --silent
 
 OBJS = $(SOURCES:.cpp=.o)
 
-TARGET = ./../Shared_mem.so
+TARGET = ./../libshared_mem.so\
+
 all: $(TARGET)
 
 $(TARGET):

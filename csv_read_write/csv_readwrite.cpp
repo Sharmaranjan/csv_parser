@@ -4,7 +4,16 @@
 #include <sstream>
 #include <stdio.h>
 #include <regex>
-#include "common_include.h" 
+#include "common_include.h"
+
+extern "C"{
+    int total_dist_fromcpp;
+    int val_updated_flag;
+
+}
+
+
+
 using namespace std;
 fstream csvfile;
 std::string filename_cr;
@@ -88,5 +97,7 @@ void csv_readwrite(void)
 	myfile.close();
 	cout<<"\nTotal Distance Covered : "<<total_dist<<" KM"<<endl;
 	cout<<"CSV Parsed Successfully!!!!"<<endl;
+	total_dist_fromcpp = total_dist;
+	val_updated_flag = 1;
 	//return 0;
 }
